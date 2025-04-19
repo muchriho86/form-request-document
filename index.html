@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pemesanan Dokumen | Perpustakaan Pascasarjana UIKA Bogor</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      line-height: 1.6;
+      color: #333;
+    }
+
+    header {
+      background: #004d40;
+      color: #fff;
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .profile {
+      text-align: center;
+    }
+
+    .profile h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #004d40;
+    }
+
+    .profile p {
+      font-size: 1.1rem;
+      line-height: 1.8;
+    }
+
+    .form-section {
+      background: #e0f2f1;
+      padding: 60px 20px;
+    }
+
+    .form-section h2 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 30px;
+      color: #004d40;
+    }
+
+    form {
+      background: #fff;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      max-width: 600px;
+      margin: auto;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 600;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    button {
+      background: #004d40;
+      color: #fff;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    button:hover {
+      background: #00332c;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Pemesanan Dokumen</h1>
+    <p>Layanan pemesanan dokumen Perpustakaan Pascasarjana Universitas Ibn Khaldun (UIKA) Bogor</p>
+  </header>
+
+  <section class="profile">
+    <h2>Profil Perpustakaan Pascasarjana UIKA</h2>
+    <p>Perpustakaan Pascasarjana UIKA Bogor menyediakan layanan informasi, referensi, dan pemesanan dokumen ilmiah bagi seluruh civitas akademika Pascasarjana. Dengan koleksi digital dan cetak yang terus berkembang, kami mendukung kegiatan akademik dan riset secara optimal.</p>
+  </section>
+
+  <section class="form-section">
+    <h2>Formulir Pemesanan</h2>
+    <form id="orderForm" action="https://docs.google.com/forms/d/e/1FAIpQLSdjrQUGgKTKmlaHK7eDRRBuDf7OP0Sv0hnP-j8sJ_DTX4hULQ/formResponse" method="POST" target="_blank">
+      <label for="nama">Nama Pemesan</label>
+      <input type="text" id="nama" name="entry.123456" required>
+
+      <label for="npm">ID Anggota / NPM</label>
+      <input type="text" id="npm" name="entry.234567" required>
+
+      <label for="alamat">Alamat Kirim</label>
+      <textarea id="alamat" name="entry.345678" required></textarea>
+
+      <label for="whatsapp">No HP / WhatsApp</label>
+      <input type="text" id="whatsapp" name="entry.456789" required>
+
+      <label for="jenis">Jenis Dokumen</label>
+      <select id="jenis" name="entry.567890" required>
+        <option value="">-- Pilih Jenis Dokumen --</option>
+        <option value="Jurnal">Jurnal</option>
+        <option value="Tesis">Tesis</option>
+        <option value="Buku">Buku</option>
+        <option value="Artikel Ilmiah">Artikel Ilmiah</option>
+      </select>
+
+      <label for="rincian">Rincian Pesanan</label>
+      <textarea id="rincian" name="entry.678901" required></textarea>
+
+      <button type="submit">Kirim Pesanan</button>
+    </form>
+  </section>
+
+  <script>
+    document.getElementById("orderForm").addEventListener("submit", function () {
+      setTimeout(() => {
+        window.open("https://wa.me/62881081594000?text=Halo%20Admin%2C%20saya%20sudah%20mengisi%20formulir%20pemesanan%20dokumen.", "_blank");
+      }, 1000);
+    });
+  </script>
+</body>
+</html>
